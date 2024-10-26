@@ -46,27 +46,3 @@ class Mapper
     end
   end
 end
-
-# class Comment < Mapper
-#   map 'id',         to: :social_id
-#   map 'post_id',    to: :post_id
-#   map %w[owner id], to: :profile_social_id
-
-#   map 'text', to: :body
-
-#   map 'created_at', to: :published_at, use: ->(val) { Time.at(val) if val }
-# end
-
-# class Profile < Mapper
-#   map 'id',        to: :social_id
-#   map 'biography', to: :description, optional: true
-#   map 'username',  to: :username
-
-#   map 'profile_pic_url', to: :avatar_url
-
-#   map 'full_name', to: :first_name, use: ->(val) { val.split[0] if val.split.size == 2 }, optional: true
-#   map 'full_name', to: :last_name,  use: ->(val) { val.split[1] if val.split.size == 2 }, optional: true
-
-#   map %w[edge_followed_by count], to: :followers
-#   map %w[edge_follow count],      to: :following
-# end
