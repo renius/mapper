@@ -8,7 +8,7 @@ RSpec.describe Mapper do
       map 'post_id',    to: :post_id
       map %w[owner id], to: :profile_social_id
       map 'text',       to: :body
-      map 'created_at', to: :published_at, use: ->(val) { Time.at(val) if val }
+      map 'created_at', to: :published_at, use: ->(val) { Time.at(val) if val }, optional: true
     end
 
     let(:input_data) do
