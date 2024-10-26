@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'lib/hash_extensions'
+
 class Mapper
   Options = Data.define(:key, :handler, :optional) do
     def handler?
